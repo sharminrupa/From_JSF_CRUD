@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>User results</h1>
+        <table border="1" width="400px" >
+            <thead>
+                <tr> 
+                    <th>Name</th>                
+                    <th>Mobile</th>                
+                    <th>Email</th>                
+                    <th>Gender</th>   
+                    <th>Course</th>                                              
+                    <th>Date</th>                
+                    <th>Address</th>                
+                    <th>Action</th>                
+                </tr> 
+            </thead>
+            <tbody>
+                <c:forEach var="reg" items="#{st.showData}">
+                    <tr> 
+                        <td><p align="center"><h:outputLabel value="#{reg.name}"/></p></td>
+                        <td><p align="center"><h:outputLabel value="#{reg.mobile}"/></p></td>
+                        <td><p align="center"><h:outputLabel value="#{reg.email}"/></p></td>   
+                        <td><p align="center"><h:outputLabel value="#{reg.gender}"/></p></td>  
+                        <td><p align="center"><h:outputLabel value="#{reg.applay}"/></p></td>   
+                        <td><p align="center"><h:outputLabel value="#{reg.date}"/></p></td>   
+                        <td><p align="center"><h:outputLabel value="#{reg.address}"/></p></td>   
+                        <td><a href="edit.xhtml" align="center">Edit</a></td>   
+                        <td><a href="delete.xhtml" align="center">Delete</a></td>   
+                    </tr> 
+                </c:forEach>
+            </tbody> 
+        </table>
+    </h:body>
+</html>
+

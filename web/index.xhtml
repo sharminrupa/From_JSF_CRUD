@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        
+    </h:head>
+    <h:body>
+        
+        <h1>Registation Page</h1>
+        <f:view>
+            <h:form id="form">  
+                <table>  
+                    <tr>  
+                        <td>
+                            <h:outputLabel for="s_name">Student Name: </h:outputLabel>
+                        </td>  
+                        <td>
+                            <h:inputText id="name-id" value="#{st.name}"/>
+                        </td>  
+                    </tr>  
+                    <tr>  
+                        <td>
+                            <h:outputLabel for="p-mobile">Mobile Number: </h:outputLabel>
+                        </td>  
+                        <td>
+                            <h:inputText id="mobile-id" value="#{st.mobile}"/>
+                        </td>  
+                    </tr>  
+
+                    <tr>
+                        <td>
+                            <h:outputLabel for="p-add">Email Address: </h:outputLabel>
+                        </td>  
+                        <td>
+                            <h:inputText id="address-id" value="#{st.email}"/>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>
+                            <h:outputLabel for="p-gen">Gender: </h:outputLabel>
+                        </td>  
+                        <td>
+                            <h:selectOneRadio id="gender-id" value="#{st.gender}">
+                                <f:selectItem itemValue="Male" itemLabel="Male"></f:selectItem>
+                                <f:selectItem itemValue="Female" itemLabel="Female"></f:selectItem>
+                            </h:selectOneRadio>                            
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td>
+                            <h:outputLabel for="p-add">Applay for: </h:outputLabel>
+                        </td>  
+                        <td>
+                            <h:selectOneMenu id="applay-id" value="#{st.applay}">
+                                <f:selectItem itemValue="JAVA" itemLabel="JAVA" />
+                                <f:selectItem itemValue="PHP" itemLabel="PHP" />
+                                <f:selectItem itemValue="C#" itemLabel="C#" />
+                                <f:selectItem itemValue="DDD" itemLabel="DDD" />
+                            </h:selectOneMenu>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>
+                            <h:outputLabel for="p-date">Date: </h:outputLabel>
+                        </td>  
+                        <td>
+                            <h:inputText id="date-id" value="#{st.date}">
+                                <f:convertDateTime dateStyle="full" pattern="yyyy-mm-dd"/> 
+                               
+                            </h:inputText>
+                            
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>
+                            <h:outputLabel for="p-textarea">Address: </h:outputLabel>
+                        </td>  
+                        <td>
+                            <h:inputTextarea id="textarea-id" value="#{st.address}"></h:inputTextarea>
+                        </td>
+                    </tr> 
+                </table>  
+                <h:commandButton value="Submit" action="response.xhtml"></h:commandButton>  
+            </h:form>  
+        </f:view>             
+    </h:body>
+</html>
+
